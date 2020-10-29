@@ -15,3 +15,19 @@ To sync all our stuffs:
 ```
 repo sync --force-sync -j32
 ```
+
+Before building: 
+
+```
+Add this flag in syntatix_yourdevicename.mk: 
+```
+
+```
+TARGET_DEVICE := yourdevicename
+```
+
+example: 
+
+```
+TARGET_DEVICE := onclite
+```
