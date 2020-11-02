@@ -2,7 +2,7 @@
 <manifest>
 
   <remote  name="aosp"
-           fetch=".."
+           fetch="https://android.googlesource.com/"
            review="https://android-review.googlesource.com/" />
   <default revision="refs/tags/android-11.0.0_r8"
            remote="aosp"
@@ -838,5 +838,11 @@
   <project path="tools/trebuchet" name="platform/tools/trebuchet" groups="tools,cts,pdk,pdk-cw-fs,pdk-fs" />
 
   <repo-hooks in-project="platform/tools/repohooks" enabled-list="pre-upload" />
+
+  <-- SyntatiX-OS -->
+  <include name="snippets/syntatix.xml" />
+
+  <-- Remove stuffs -->
+  <include name="snippets/remove.xml" />
 
 </manifest>

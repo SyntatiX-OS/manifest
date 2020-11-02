@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- SyntatiX-OS -->
+  <remote name="syntatix"
+          fetch="https://github.com/SyntatiX-OS"
+          revision="refs/heads/11" />
+
+  <!-- PixysOS -->
+  <remote name="pixys"
+          fetch="https://gitlab.com/PixysOS"
+          revision="refs/heads/eleven" />
+ 
+   <remove-project name="platform/build/make" />
+   <project path="build/make" name="build_make" groups="pdk" remote="syntatix" />
+   <copyfile src="core/root.mk" dest="Makefile" />
+   <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+   <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+   <linkfile src="core" dest="build/core" />
+   <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+   <linkfile src="target" dest="build/target" />
+   <linkfile src="tools" dest="build/tools" />
+   <project path="vendor/gapps" name="vendor_gapps" remote="pixys" />
+    <remove-project name="platform/build/soong"/>
+    <project path="build/soong" name="build_soong" remote="syntatix" groups="pdk,tradefed" />
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+    <remove-project name="platform/packages/apps/Settings" />
+    <project path="packages/apps/Settings" name="packages_apps_Settings" remote="syntatix" />
+    <project path="vendor/syntatix" name="vendor_syntatix" remote="syntatix" />
+
+</manifest>
