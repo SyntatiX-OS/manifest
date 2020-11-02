@@ -9,7 +9,7 @@ familiar with [Repo](https://source.android.com/source/using-repo.html) and [Ver
 
 Let's initialize our ROM source.
 ```
-repo init -u https://github.com/MArshadR/manifest.git
+repo init -u https://github.com/SyntatiX-OS/manifest.git -b sR
 ```
 To sync all our stuffs:
 ```
