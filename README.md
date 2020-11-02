@@ -26,8 +26,8 @@ Add this flag in syntatix_yourdevicename.mk:
 TARGET_DEVICE := yourdevicename
 ```
 
-example: 
+Do Define GApps arch:  
 
 ```
-TARGET_DEVICE := onclite
+TARGET_GAPPS_ARCH := arm / arm64
 ```
